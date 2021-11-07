@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'channels',
     'FallInChat',
-    'django_private_chat2.apps.DjangoPrivateChat2Config',
     # 'corsheaders',
     
 ]

@@ -16,11 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url,include
-from django_private_chat2 import urls as django_private_chat2_urls
 
 urlpatterns = [
     path('FallInChat/', include('FallInChat.urls')),
     path('admin/', admin.site.urls),
     url(r'^',include('FallInApp.urls')),
-    url(r'^', include(django_private_chat2_urls)),
 ]
