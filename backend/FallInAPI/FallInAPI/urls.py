@@ -16,9 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url,include
+from . import views
+from django.urls import re_path
 
 urlpatterns = [
-    path('FallInChat/', include('FallInChat.urls')),
+    path('FallInChat/', include(('FallInChat.urls','FallInChat'),  namespace='FallInChat')),
     path('admin/', admin.site.urls),
     url(r'^',include('FallInApp.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
+    re_path(r'^$', views.index, name='index')
 ]
