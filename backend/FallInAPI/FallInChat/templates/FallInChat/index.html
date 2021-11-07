@@ -1,4 +1,14 @@
 <!-- chat/templates/FallInChat/index.html -->
+
+{% if user.is_authenticated != True %}
+<!DOCTYPE html>
+<html>
+<p>Your account doesn't have access to this page. To proceed,
+please login with an account that has access.</p>
+<p><a href="{% url 'login' %}">log in</a></p>
+</html>
+{% else %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,3 +35,5 @@
     </script>
 </body>
 </html>
+
+{% endif %}

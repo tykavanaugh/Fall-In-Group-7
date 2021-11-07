@@ -24,5 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^',include('FallInApp.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-    re_path(r'^$', views.index, name='index')
+    re_path(r'^$', views.index, name='index'),
+    path('submitinfo/', views.submit_info),
+    path('organization/', views.submit_info),
+
 ]
