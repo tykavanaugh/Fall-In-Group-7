@@ -9,11 +9,42 @@ please login with an account that has access.</p>
 {% else %}
 
 
-
-<div class="container">
-  <div class="item">
-    <h1>Hello world</h1>
+<div class="wrapper">
+  <form method="post" action="" class="ccform">
+  <div class="ccfield-prepend">
+      <span class="ccform-addon"></span>
+      <input class="ccformfield" type="text" placeholder="Name" required>
   </div>
+  <div class="ccfield-prepend">
+      <span class="ccform-addon"></span>
+      <input class="ccformfield" type="text" placeholder="Email" required>
+  </div>
+  <div class="ccfield-prepend">
+      <span class="ccform-addon"></i></span>
+      <input class="ccformfield" type="text" placeholder="Country">
+  </div>
+   <div class="ccfield-prepend">
+      <span class="ccform-addon"></span>
+      <input class="ccformfield" type="text" placeholder="City" required>
+  </div>
+  <div class="ccfield-prepend">
+      <span class="ccform-addon"></span>
+      <textarea class="ccformfield" name="text" rows="8" placeholder="Needs" required></textarea>
+  </div>
+  </div>
+  <div class="ccfield-prepend">
+      <span class="ccform-addon"></span>
+      <textarea class="ccformfield" name="text" rows="8" placeholder="Urgency" required></textarea>
+  </div>
+  </div>
+  <div class="ccfield-prepend">
+      <span class="ccform-addon"></span>
+      <textarea class="ccformfield" name="comments" rows="8" placeholder="Details" required></textarea>
+  </div>
+  <div class="ccfield-prepend">
+      <input class="ccbtn" type="submit" value="Add">
+  </div>
+  </form>
 </div>
 {% endif %}
 {% endblock %}

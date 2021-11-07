@@ -18,6 +18,8 @@ from django.urls import path
 from django.conf.urls import url,include
 from . import views
 from django.urls import re_path
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 
 urlpatterns = [
     path('FallInChat/', include(('FallInChat.urls','FallInChat'),  namespace='FallInChat')),
@@ -26,6 +28,6 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     re_path(r'^$', views.index, name='index'),
     path('submitinfo/', views.submit_info),
-    path('organization/', views.submit_info),
+    path('organization/', views.organization_portal),
 
 ]
